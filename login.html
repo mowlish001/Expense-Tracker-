@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Expense Tracker – {{ page_title }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script>
+        function togglePassword() {
+            const pwd = document.getElementById("password");
+            pwd.type = pwd.type === "password" ? "text" : "password";
+        }
+    </script>
+</head>
+
+<body>
+<div class="card">
+
+    <div class="app-title" style="text-align:center; font-size:28px; font-weight:bold; color:#2c3e50; margin-bottom:20px;">
+    Smart Expense Tracker
+</div>
+
+
+    <h2>Login</h2>
+
+    <form method="post">
+
+        <input type="email" name="email" placeholder="Email" required>
+
+        <div class="password-box">
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <span onclick="togglePassword()"></span>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <p><a href="/register">New User? Register</a></p>
+    </form>
+</div>
+</body>
+</html>

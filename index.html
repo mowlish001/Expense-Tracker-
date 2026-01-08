@@ -1,0 +1,33 @@
+<p>Welcome {{ session['user_name'] }}</p>
+<a href="/logout">Logout</a>
+
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="/add" class="btn">+ Add Expense</a>
+
+<h3>Total Expense: ₹ {{ total }}</h3>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Amount</th>
+        <th>Category</th>
+        <th>Date</th>
+        <th>Action</th>
+    </tr>
+
+    {% for expense in expenses %}
+    <tr>
+        <td>{{ expense.title }}</td>
+        <td>₹ {{ expense.amount }}</td>
+        <td>{{ expense.category }}</td>
+        <td>{{ expense.date }}</td>
+        <td>
+            <a href="/edit/{{ expense.id }}">Edit</a> |
+            <a href="/delete/{{ expense.id }}" onclick="return confirm('Delete?')">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

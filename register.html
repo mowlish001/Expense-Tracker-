@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Expense Tracker – {{ page_title }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script>
+        function togglePassword() {
+            const pwd = document.getElementById("password");
+            pwd.type = pwd.type === "password" ? "text" : "password";
+        }
+    </script>
+</head>
+
+<body>
+<div class="card">
+
+    <div class="app-title" style="text-align:center; font-size:28px; font-weight:bold; color:#2c3e50; margin-bottom:20px;">
+    Smart Expense Tracker
+</div>
+
+
+    <h2>Register</h2>
+
+    <form method="post">
+
+        <input type="text" name="name" placeholder="Name" required>
+
+        <input type="email" name="email" placeholder="Email" required>
+
+        <label>Monthly Income:</label>
+        <input type="number" name="monthly_income" placeholder="Enter your monthly income" required>
+
+
+       <div class="password-box">
+    <input type="password" id="password" name="password" placeholder="Password" required
+           style="width:100%; padding:8px; box-sizing:border-box;">
+</div>
+
+
+        <button type="submit">Register</button>
+
+        <p>Already registered? <a href="{{ url_for('login') }}">Login</a></p>
+
+
+    {% if message %}
+    <p style="color:red; text-align:center;">{{ message }}</p>
+{% endif %}
+
+    </form>
+</div>
+</body>
+</html>
