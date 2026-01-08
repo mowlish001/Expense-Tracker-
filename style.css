@@ -1,0 +1,143 @@
+body{font-family:Arial;background:linear-gradient(120deg,#89f7fe,#66a6ff)}
+.card{width:350px;margin:80px auto;background:white;padding:25px;border-radius:12px;box-shadow:0 8px 16px rgba(0,0,0,.2)}
+input,select,button{width:100%;padding:10px;margin:8px 0;border-radius:6px;border:1px solid #ccc}
+button{background:#4a6cf7;color:white;font-weight:bold;border:none}
+table{width:80%;margin:auto;background:white;border-collapse:collapse}
+th,td{padding:10px;border-bottom:1px solid #ddd;text-align:center}
+a{text-decoration:none;color:#4a6cf7}
+
+.add-expense-btn {
+    display: inline-block;
+    background-color: #27ae60; /* green */
+    color: white;              /* white text */
+    padding: 10px 20px;        /* box padding */
+    border-radius: 8px;        /* slightly rounded corners */
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.2); /* subtle shadow */
+    transition: background-color 0.3s;
+    margin-top: 20px; /* <-- space from top bar */
+}
+
+.add-expense-btn:hover {
+    background-color: #219150; /* darker green on hover */
+}
+.budget-progress {
+    width: 80%;
+    margin: 20px auto; /* spacing from top bar and table */
+}
+
+.budget-progress p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #eee;
+    border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #27ae60; /* green progress */
+    border-radius: 10px 0 0 10px;
+    transition: width 0.5s ease;
+}
+.budget-card {
+    max-width: 400px;
+    margin: 30px auto;          /* centers below the table */
+    padding: 18px 22px;
+    background-color: #fdfdfd;  /* soft white */
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08); /* lighter shadow */
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.budget-card p {
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.budget-card .spent {
+    color: #34495e;  /* subtle dark blue/gray */
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.budget-card .left {
+    color: #2ecc71;  /* soft green for money left */
+    font-weight: 500;
+}
+
+.budget-card .exceeded {
+    color: #e74c3c;  /* soft red for exceeded */
+    font-weight: 500;
+}
+
+.filter-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 32px;              /* MAIN SPACE BETWEEN GROUPS */
+    margin-top: 16px;
+}
+
+/* DATE GROUP */
+.date-group {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* FORCE SPACE BETWEEN FROM & TO */
+.date-group .filter-field:first-child {
+    margin-right: 18px;    /* VISIBLE GAP */
+}
+
+/* LABELS */
+.filter-form label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 6px;
+}
+
+/* SAME HEIGHT FOR CATEGORY / FROM / TO */
+.filter-form select,
+.filter-form input[type="date"] {
+    height: 42px !important;
+    min-height: 42px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccd3da;
+    font-size: 14px;
+    background: #fff;
+}
+
+/* CATEGORY WIDTH */
+.filter-form select {
+    width: 210px;
+}
+
+/* CLEAR BUTTON — SLIGHTLY SMALLER */
+.clear-btn {
+    height: 36px !important;
+    padding: 0 20px;
+    background: #f4f6f8;
+    border: 1px solid #ccd3da;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* EXTRA SPACE BEFORE CLEAR BUTTON */
+.clear-field {
+    margin-left: 22px;     /* CLEAR SEPARATION */
+}
